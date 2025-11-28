@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Cardápio Digital</title>
+</head>
+<body>
+    <header>
+        <div> 
+            <img src="imagens/MOSCATEL-FINAL.png" alt="logomarca da empresa" class="logo" id="logomarca">
+            <h1 class="title">White Fly Delivery</h1>
+        </div>
+
+        <div>
+            <a href="https://www.instagram.com/guscatigna/" target="_blank"><img src="imagens/icone-instagram.png.png" alt="Instagram" width="30"></a>
+            <button id="btn-carrinho" class="botao-carrinho">Carrinho <img src="imagens/carrinho.png" alt="Carrinho" width="20"> <span id="contador-carrinho">0</span></button>
+        </div>
+    </header>
+
+    <main>
+        <nav class="filtros">
+            <button class="btn-filtro ativo" data-categoria="tudo">TUDO</button>
+            
+            <button class="btn-filtro" data-categoria="Entrada">ENTRADAS</button>
+            <button class="btn-filtro" data-categoria="Sanduíche">SANDUÍCHES</button>
+            <button class="btn-filtro" data-categoria="Hot Dog">HOT DOGS</button>
+            <button class="btn-filtro" data-categoria="Burger">BURGERS</button>
+            <button class="btn-filtro" data-categoria="Saudáveis">SAUDÁVEIS</button>
+        </nav>
+
+        <section id="container-cards" class="grade-cards"></section>
+
+    </main>
+
+    <div id="modal-carrinho" class="modal-overlay">
+        <div class="modal-conteudo">
+            
+            <div class="modal-header">
+                <h2>Meu Pedido</h2>
+                <button id="btn-fechar-modal" class="btn-fechar">&times;</button> </div>
+
+            <div id="itens-carrinho" class="modal-body">
+                <p>Seu carrinho está vazio.</p>
+            </div>
+
+            <div class="modal-footer">
+                <div class="total">
+                    <span>Total:</span>
+                    <span id="preco-total">R$ 0,00</span>
+                </div>
+                <button id="btn-finalizar">Finalizar Pedido</button>
+            </div>
+
+        </div>
+    </div>
+
+    <script src="script.js" defer></script>
+</body>
+</html>
